@@ -6,8 +6,6 @@ import os
 host = "127.0.0.1"
 port = 5555
 
-IDENTIFIER = "<END_OF_COMMAND_OUTPUT>"
-
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
 client.connect((host, port))
